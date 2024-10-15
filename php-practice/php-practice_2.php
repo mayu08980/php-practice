@@ -51,19 +51,30 @@ class Student
 
     public function __construct($id, $name)
     {
-        var_dump($this);
         $this->studentId = $id;
-        var_dump($this);
         $this->studentName = $name;
-        var_dump($this);
     }
-
-echo '学籍番号'.$yamada->studentId.'の生徒は'.$yamada->studentName.'です'."\n";
-
-// Q4 オブジェクト-2
-public function attend()
+    public function attend()
     {
-      echo $this->studentName.'は'.$Subject.'の授業に出席しました。'.'学籍番号:'.$this->studentId."\n";
+      echo '授業に出席しました。';
+    }
+  }
+$yamada = new Student('120', '山田');
+echo '学籍番号'.$yamada->studentId.'番の生徒は'.$yamada->studentName.'です。'."\n";
+// Q4 オブジェクト-2
+class Student
+{
+    public $studentId;
+    public $studentName;
+
+    public function __construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+public function attend($php)
+    {
+      echo $this->studentName.'は'.$php.'の授業に出席しました。'.'学籍番号:'.$this->studentId."\n";
     }
 }
 
