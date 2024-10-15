@@ -72,15 +72,22 @@ class Student
         $this->studentId = $id;
         $this->studentName = $name;
     }
-public function attend($php)
+public function attend($Subject)
     {
-      echo $this->studentName.'は'.$php.'の授業に出席しました。'.'学籍番号:'.$this->studentId."\n";
+      echo $this->studentName.'は'.$Subject.'の授業に出席しました。'.'学籍番号:'.$this->studentId."\n";
     }
 }
 
 $yamada = new Student('120', '山田');
 $yamada->attend('PHP');
 
+// __construct→クラスをインスタンス化（オブジェクト化）した時に、必ず実行されるメソッド
+// インスタンスを生成するときの初期化に用いられるので初期化を忘れるといったことを避けることができる他_
+// コンストラクタはインスタンス化した時にクラスに渡した引数を受け取ることができるので_constructがないと
+// インスタンスごとに別々のプロパティを設定し、それぞれの値を出力することができ無くなる
+
+// メソッドは、クラス内に関数を書くことで定義することができる。
+// $Subjectには'PHP'が代入される
 // Q5 定義済みクラス
 $time = new DateTime();
 $time->modify('-1 month');
@@ -88,4 +95,11 @@ $time2 = new DateTime('1992-04-25');
 $diff = $time->diff($time2);
 echo $time->format('Y-m-d');
 echo $diff->format('あの日から%a日経過しました')."\n";
+
+// formatはDateTimeクラスに定義されている
+// $diff->format→ふたつの DateTime オブジェクトの差を返すので用いた。
+// %a は総日数を出力するのでecho $time->format('Y-m-d');で本日の日時を呼び出してそこから何日経過したかを考えるため
+
+// modifyメソッドは何クラスに定義されているか→DateTimeクラスに定義されている
+// modifyメソッドは日時の加算・減算をする時に使用されるので-1 monthと入力することで1ヶ月前の日にちを求めることができる
 ?>
