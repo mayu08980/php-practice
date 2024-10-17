@@ -63,7 +63,7 @@ foreach ($kanto1 as $X =>$city) {
 // Q8 連想配列-2
 foreach ($kanto1 as $X =>$city) {
   if ($city == 'さいたま市') {
-      echo $X. 'の県庁所在地は、' . $city. 'です';
+      echo $x. 'の県庁所在地は、' . $city. 'です';
   }
 }
 
