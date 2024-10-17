@@ -97,8 +97,7 @@ echo $time->format('Y-m-d');
 echo $diff->format('あの日から%a日経過しました')."\n";
 
 // formatはDateTimeクラスに定義されている
-// $diff->format→ふたつの DateTime オブジェクトの差を返すので用いた。
-// %a は総日数を出力するのでecho $time->format('Y-m-d');で本日の日時を呼び出してそこから何日経過したかを考えるため
+// $time->format('Y-m-d');で現在時刻を呼びだし%a で総日数を出力しました
 
 // modifyメソッドは何クラスに定義されているか→DateTimeクラスに定義されている
 // modifyメソッドは日時の加算・減算をする時に使用されるので-1 monthと入力することで1ヶ月前の日にちを求めることができる
