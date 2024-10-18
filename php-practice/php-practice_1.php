@@ -67,6 +67,7 @@ foreach ($kanto1 as $X =>$city) {
   }
 }
 
+// $X特に理由無く大文字になっていたので小文字に訂正しました
 
 // Q9 連想配列-3
 foreach ($kanto1 as $X =>$city) {
@@ -86,6 +87,8 @@ function sayHi($name)
 sayHi('金谷さん');
 sayHi('安藤さん');
 
+// 処理をまとめるものなので、同じ処理を何回も実行する場合は
+// 何回も呼び出すことで同じ処理を再利用することで全体的にコードをスッキリさせることができた
 
 // Q11 関数-2
 $price=1000;
@@ -113,7 +116,8 @@ distinguishNum(24);
 function evaluateGrade($Grades)
 {
   switch ($Grades) {
-    case 'A||B':
+    case 'A':
+    case 'B':
       echo '合格です。'."\n";
         break;
             
@@ -131,7 +135,7 @@ function evaluateGrade($Grades)
     }
 }
 
-evaluateGrade('A||B');
+evaluateGrade('A');
 evaluateGrade('F');
 
 
