@@ -100,17 +100,27 @@ calcTaxInPrice(1000);
 $taxInPrice = calcTaxInPrice($price);
 echo($taxInPrice);
 
+// 関数基本
+// function 関数名(引数)
+// {
+//     // 処理をまとめる
+// }
+// sayHi('Gizumo');  // ここで引数を渡している
+
 // Q12 関数とif文
 function distinguishNum($number)
 {
 if(($number % 2) == 0){
-  echo $number.'は偶数です' ."\n";
+  return $number.'は偶数です' ."\n";
 }else{
-  echo $number.'は奇数です' ."\n";
+  return $number.'は奇数です' ."\n";
 }
 }
 distinguishNum(11);
+echo distinguishNum(11);
+
 distinguishNum(24);
+echo distinguishNum(24);
 
 // Q13 関数とswitch文
 function evaluateGrade($Grades)
