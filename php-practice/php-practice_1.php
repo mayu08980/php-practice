@@ -38,11 +38,17 @@ if ($device=='windows' || $device=='mac') {
 } else {
     echo 'どちらでもありません';
 }
+// 修正前はもし$deviceがmacの場合表示されずエラーになってしまうので条件的に違うと思いました
+// 今回の訂正で$device=='windows' || $device=='mac'を入れることによってmacでもwindowsでも識別出来る様にしました
+
 // Q5 条件分岐-2 三項演算子
 $age = 20;
 $message = ($age > 18) ? '成人です。' : '未成年です。';
 // if文よりも三項演算子を使った方が1文でスッキリしたコードになるメリットがある。
 // また三項演算子の結果は変数に代入することもできる
+
+// 条件分岐は三項演算子とswitch文があり、あらかじめ選択肢が決まっていて、それに対して処理を振り分けたい場合には
+// switch文をつかうので基本的には三項演算子を使います
 // Q6 配列
 $age = 20;
 $message = ($age > 18) ? '成人です。' : '未成年です。';
@@ -150,19 +156,15 @@ function evaluateGrade($Grades)
     case 'A':
     case 'B':
       return '合格です。'."\n";
-        break;
             
     case 'C':
       return '合格ですが追加課題があります。'."\n";
-        break;
             
     case 'D':
       return '不合格です。'."\n";
-        break;
             
     default:
       return '判定不明です。講師に問い合わせてください。'."\n";
-        break;
     }
 }
 
