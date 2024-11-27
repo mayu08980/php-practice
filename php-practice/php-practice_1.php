@@ -32,7 +32,7 @@ echo date("現在時刻は、Y年m月d日 H時i分s秒です。");
 // Unixのタイムスタンプを元に日付や時刻を文字列として返すための関数と出たので使用しました
 // phpの機能自体に元々定義されている関数だから
 // Q4 条件分岐-1 if文
-$device='mac' ;
+$device='windows';
 if ($device=='windows' || $device=='mac') {
     echo '使用OSは、'.$device.'です。'."\n";
 } else {
