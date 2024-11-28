@@ -1,6 +1,6 @@
 <?php
 // Q1 変数と文字列
-$name = '「平沼」';
+$name = '平沼';
 $message = '私の名前は($name)です';
 echo $message;
 
