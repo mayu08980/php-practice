@@ -33,6 +33,8 @@ $personalInfos = [
       'tel'  => '09055556666'
   ],
 ];
+
+$ageList = [25, 30, 18];
 var_dump($personalInfos[1]);
 echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です'."\n";
 
